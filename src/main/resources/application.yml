@@ -1,0 +1,25 @@
+server:
+  port: 8282
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+#eureka:
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: ${vcap.services.ocr-eureka.credentials.uri:http://ocr-eureka.au-syd.mybluemix.net/eureka/}
+#  instance:
+#    hostname: ${vcap.application.uris[0]:localhost}
+#    metadataMap:
+#      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+#
+#---
+#spring:
+#  profiles: cloud
+#eureka:
+#  instance:
+#    nonSecurePort: 80
